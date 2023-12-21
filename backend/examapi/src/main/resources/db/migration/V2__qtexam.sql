@@ -1,0 +1,3 @@
+CREATE TABLE projects (id UUID NOT NULL, name VARCHAR(50), description VARCHAR(255), PRIMARY KEY (id));
+CREATE TABLE tasks (id UUID NOT NULL, name VARCHAR(50), startdate DATE, enddate DATE, priority VARCHAR(6), projectid UUID NOT NULL, PRIMARY KEY (id), CONSTRAINT projectid FOREIGN KEY (projectid) REFERENCES projects(id));
+CREATE TABLE taskuser (id UUID NOT NULL, userid UUID NOT NULL, taskid UUID NOT NULL, PRIMARY KEY (id), CONSTRAINT userid FOREIGN KEY (userid) REFERENCES users(id), CONSTRAINT taskid FOREIGN KEY (taskid) REFERENCES tasks(id));
