@@ -2,4 +2,5 @@
 To fulfill the requirements for this test I have used the following tech stack
 <ul>
   <li>Angular 8 as the front end technology</li>
+  <li>Spring boot 3.2 for the backend</li>
 </ul>
